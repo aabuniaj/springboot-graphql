@@ -1,0 +1,16 @@
+type Store {
+	id: ID!,
+	type: String,
+	location: String,
+	levels: String,
+	launchDate: String
+}
+
+type Query {
+	stores(count: Int):[Store]
+	store(id: ID):Store
+}
+
+type Mutation {
+	createStore(type: String!, location: String!, levels: String, launchDate: String):Boolean
+}
